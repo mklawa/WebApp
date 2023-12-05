@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom";
 
 const MyRoutines = () => {
   const [routines, setRoutines] = useState({});
-  const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3000';
+  const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 
   useEffect(() => {
   const userJson = localStorage.getItem('user');

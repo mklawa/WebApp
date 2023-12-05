@@ -10,7 +10,7 @@ const CreateRoutine = () => {
   const [routineName, setRoutineName] = useState(''); // State to hold the editable routine name
   const [exercises, setExercises] = useState([]);
   const navigate = useNavigate();
-  const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3000';
+  const apiUrl = process.env.REACT_APP_API_URL || 'http://127.0.0.1:5000';
 
   useEffect(() => {
     fetch(`${process.env.PUBLIC_URL}/megaGymDataset.csv`)

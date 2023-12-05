@@ -16,7 +16,7 @@ const GeneratorForm = () => {
 
   // instantiate navigation using react router dom
   const navigate = useNavigate();
-  const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3000';
+  const apiUrl = process.env.REACT_APP_API_URL || 'http://127.0.0.1:5000';
 
   const handleChange = (e) => {
     const { name, value } = e.target;

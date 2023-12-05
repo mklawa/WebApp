@@ -10,7 +10,7 @@ const Settings = () => {
     focusArea: false,
     workoutDuration: false
   });
-  const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3000';
+  const apiUrl = process.env.REACT_APP_API_URL || 'http://127.0.0.1:5000';
   const userJson = localStorage.getItem('user');
   const userObj = JSON.parse(userJson);
   const userEmail = userObj.email;

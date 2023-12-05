@@ -8,7 +8,7 @@ const BoilerplateEditor = () => {
   const [routineName, setRoutineName] = useState(''); // State to hold the editable routine name
   const { routineName: routeRoutineName } = useParams(); // This will match the dynamic segment of the URL
   const navigate = useNavigate();
-  const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3000';
+  const apiUrl = process.env.REACT_APP_API_URL || 'http://127.0.0.1:5000';
 
   useEffect(() => {
     const routineUrl = `${apiUrl}/${encodeURIComponent(routeRoutineName)}`;
