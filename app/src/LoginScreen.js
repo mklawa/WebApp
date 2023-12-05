@@ -24,9 +24,11 @@ const LoginScreen = () => {
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent default form submission behavior
 
+    const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+
     try {
       // Make a POST request to your Flask backend
-      const response = await fetch('http://127.0.0.1:5000/login', { // Replace '/login' with your Flask login route
+      const response = await fetch(`${apiUrl}/login`, { // Replace '/login' with your Flask login route
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
