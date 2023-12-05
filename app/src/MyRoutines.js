@@ -5,13 +5,15 @@ import {useNavigate} from "react-router-dom";
 
 const MyRoutines = () => {
   const [routines, setRoutines] = useState({});
+  const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3000';
 
-useEffect(() => {
+  useEffect(() => {
   const userJson = localStorage.getItem('user');
   const userEmail = userJson ? JSON.parse(userJson).email : null;
 
+
   if (userEmail) {
-  fetch(`http://localhost:5000/api/routines?userEmail=${userEmail}`)
+  fetch(`${apiUrl}/api/routines?userEmail=${encodeURIComponent(userEmail)}`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -31,7 +33,7 @@ useEffect(() => {
   } else {
     console.error('User email not found in local storage');
   }
-}, []);
+}, [apiUrl]);
 
 
 
@@ -40,7 +42,7 @@ const selectRoutine = (routineId) => {
   // Assuming routineId is the routine name
   const userEmail = JSON.parse(localStorage.getItem('user')).email;
   const routineIdentifier = userEmail + routineId;
-  navigate(`/${routineIdentifier}/edit`);
+  navigate(`/${encodeURIComponent(routineIdentifier)}/edit`);
 };
 
   return (

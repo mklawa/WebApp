@@ -16,6 +16,7 @@ const GeneratorForm = () => {
 
   // instantiate navigation using react router dom
   const navigate = useNavigate();
+  const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3000';
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -40,7 +41,7 @@ const GeneratorForm = () => {
     const userEmail = userObj.email;
 
     // If there are no errors, continue with form submission
-    fetch('http://127.0.0.1:5000/generator', {
+    fetch(`${apiUrl}/generator`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

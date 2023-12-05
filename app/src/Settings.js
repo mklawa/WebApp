@@ -3,7 +3,6 @@ import Navbar from './Navbar';
 import './Settings.css';
 import {useNavigate} from "react-router-dom";
 
-
 const Settings = () => {
   // States to manage display and edit modes
   const [editMode, setEditMode] = useState({
@@ -11,6 +10,7 @@ const Settings = () => {
     focusArea: false,
     workoutDuration: false
   });
+  const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3000';
   const userJson = localStorage.getItem('user');
   const userObj = JSON.parse(userJson);
   const userEmail = userObj.email;
@@ -54,7 +54,7 @@ const Settings = () => {
     toggleEdit(e.target.name);
   };
   const handleUpdateSettings = () => {
-    const updateUrl = 'http://127.0.0.1:5000/update_settings';
+    const updateUrl = `${apiUrl}/update_settings`;
 
     fetch(updateUrl, {
       method: 'POST',

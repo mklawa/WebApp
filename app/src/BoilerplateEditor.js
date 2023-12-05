@@ -8,18 +8,17 @@ const BoilerplateEditor = () => {
   const [routineName, setRoutineName] = useState(''); // State to hold the editable routine name
   const { routineName: routeRoutineName } = useParams(); // This will match the dynamic segment of the URL
   const navigate = useNavigate();
+  const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3000';
 
   useEffect(() => {
-  let routineUrl;
-
-    routineUrl = `http://127.0.0.1:5000/${routeRoutineName}`;
+    const routineUrl = `${apiUrl}/${encodeURIComponent(routeRoutineName)}`;
     fetch(routineUrl)
       .then(response => response.json())
       .then(data => {
         setExercises(data);
       })
       .catch(error => console.error('Error:', error));
-  }, [routeRoutineName]);
+  }, [apiUrl, routeRoutineName]);
 
   const handleSetRepsChange = (index, type, delta) => {
     // Function to increment or decrement sets or reps
@@ -32,7 +31,7 @@ const BoilerplateEditor = () => {
   };
 
 const handleSaveRoutine = (callback = () => {}) => {
-  const updateUrl = `http://127.0.0.1:5000/update_routine/${routeRoutineName}`;
+  const updateUrl = `${apiUrl}/update_routine/${encodeURIComponent(routeRoutineName)}`;
 
   fetch(updateUrl, {
     method: 'POST',

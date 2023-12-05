@@ -7,9 +7,10 @@ const BoilerplateRender = () => {
   const [exercises, setExercises] = useState([]);
   const { routineName } = useParams(); // This will match the dynamic segment of the URL
   const navigate = useNavigate(); // Initialize the useNavigate hook
+  const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3000';
 
   useEffect(() => {
-    const routineUrl = `http://127.0.0.1:5000/${routineName}`; // Construct the URL based on the routine name
+    const routineUrl = `${apiUrl}/${encodeURIComponent(routineName)}`; // Construct the URL based on the routine name
     fetch(routineUrl)
       .then(response => response.json())
       .then(data => {
@@ -24,7 +25,7 @@ const BoilerplateRender = () => {
         setExercises(exercisesWithState);
       })
       .catch(error => console.error('Error:', error));
-  }, [routineName]); // Re-run the effect if routineName changes
+  }, [apiUrl, routineName]); // Re-run the effect if routineName changes
 
   const handleSetClick = (exerciseIndex, setIndex) => {
     // Function to handle clicks on sets

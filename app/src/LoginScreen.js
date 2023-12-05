@@ -24,7 +24,7 @@ const LoginScreen = () => {
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent default form submission behavior
 
-    const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+    const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3000';
 
     try {
       // Make a POST request to your Flask backend

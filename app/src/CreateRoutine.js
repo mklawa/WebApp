@@ -10,9 +10,10 @@ const CreateRoutine = () => {
   const [routineName, setRoutineName] = useState(''); // State to hold the editable routine name
   const [exercises, setExercises] = useState([]);
   const navigate = useNavigate();
+  const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3000';
 
   useEffect(() => {
-    fetch('megaGymDataset.csv')
+    fetch(`${process.env.PUBLIC_URL}/megaGymDataset.csv`)
       .then(response => response.text())
       .then(data => {
         const rows = data.split('\n');
@@ -49,7 +50,7 @@ const handleContinue = () => {
     return;
   }
 
-  const postUrl = 'http://127.0.0.1:5000/add_routine'; // Replace with your actual backend endpoint
+  const postUrl = `${apiUrl}/add_routine`; 
 
   fetch(postUrl, {
     method: 'POST',
