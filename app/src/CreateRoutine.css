@@ -1,0 +1,60 @@
+.create-routine-page {
+  padding: 0;
+  text-align: center;
+}
+
+.routine-creator {
+  padding: 40px;
+}
+
+.dropdown-menu {
+  padding: 10px;
+  margin: 10px 0;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.routine-name-input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 80%; /* Same as dropdown-menu for consistent width */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.dropdown-menus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.continue-button {
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #448546;
+  color: white;
+  cursor: pointer;
+}
+
+.continue-button:hover {
+  background-color: #367c39;
+}
+
+.exercises-list {
+  margin-top: 20px;
+}
+
+.exercise-item {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .routine-creator {
+    padding: 20px;
+  }
+}

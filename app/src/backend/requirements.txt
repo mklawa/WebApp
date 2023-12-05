@@ -1,0 +1,7 @@
+Flask
+Flask-WTF
+Flask-SQLAlchemy
+flask-cors
+WTForms
+psycopg2
+pycryptodome

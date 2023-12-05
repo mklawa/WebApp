@@ -1,0 +1,24 @@
+.setting-item {
+  margin: 20px;
+  cursor: pointer;
+}
+
+.setting-item p, .setting-item select, .setting-item input {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: white;
+  box-sizing: border-box;
+  color: #333;
+}
+
+.setting-item select, .setting-item input {
+  cursor: text;
+}
+
+/* Adjust styles for edit mode */
+.setting-item select:focus, .setting-item input:focus {
+  outline: none;
+  border-color: #353535;
+}

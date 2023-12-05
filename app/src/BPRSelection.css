@@ -1,0 +1,36 @@
+/* BPRSelection.css */
+
+.landing-page {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px; /* Consistent with the dashboard's top margin */
+  }
+
+  .info-block {
+    width: 100%;
+    max-width: 300px; /* Adjust the max-width to control block size */
+    margin: 20px auto; /* Center blocks with automatic margins on the sides */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer; /* Indicates you can click on the block */
+    transition: background-color 0.3s ease;
+  }
+
+  .info-block:hover {
+    background-color: #f7f7f7; /* Slight highlight on hover */
+  }
+
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .info-block {
+      width: calc(100% - 40px); /* Adjust width for smaller screens */
+      margin: 10px; /* Adjust margin for smaller screens */
+    }
+  }

@@ -1,0 +1,43 @@
+.my-routines-page {
+    padding: 0;
+    text-align: center;
+  }
+  
+  .routines-content {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .routine-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .routines-content {
+      padding: 20px;
+    }
+  }
+
+/* Styles for the container holding the routine buttons */
+.info {
+  display: flex;
+  flex-direction: column; /* This will stack child elements vertically */
+  align-items: center; /* Aligns children (buttons) in the center */
+  gap: 10px; /* Optional: adds space between each button */
+}
+
+/* Styles for each routine button */
+.routine-button {
+  /*width: 20%; !* Adjust as needed, ensures buttons take up most of the container width *!*/
+  padding: 10px; /* 10px top and bottom, 20px left and right */
+  width: 200px;
+  margin: 5px 0; /* Adds margin above and below each button */
+  cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+  text-align: center; /* Ensures text is centered within the button */
+  border-radius: 5px; /* Optional: Rounds the corners of the button */
+  display: inline-block; /* Makes the button width only as wide as its content plus padding */
+
+  /* Add more styling as needed (e.g., border, background color, etc.) */
+}

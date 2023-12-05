@@ -1,0 +1,71 @@
+/* RegistrationForm.css */
+
+.registration-form {
+  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+  padding: 100px;
+  /* border: 1px solid #ccc; Commented out to remove the box */
+  /* border-radius: 5px; Commented out to remove the box */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); Commented out to remove the box */
+}
+
+.form-group {
+  margin: 30px 0;
+}
+
+label {
+  text-align: left;
+  display: block;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: white;
+  box-sizing: border-box;
+  color: #333;
+}
+
+button {
+  font-size: 1em;
+  padding: 10px 20px;
+  background-color: #353535; /* Change to your preferred button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #767676;
+}
+
+.error {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .registration-form {
+    width: auto; /* Take up the available horizontal space */
+    padding: 50px 20px; /* Reduce padding on smaller screens */
+    margin-top: 20px; /* Additional top margin for mobile */
+  }
+
+  /* Stack the form elements */
+  input, select, button {
+    margin-top: 10px; /* Add space between stacked elements */
+  }
+
+  .form-group {
+    margin: 20px 0; /* Less space between form groups on smaller screens */
+  }
+}

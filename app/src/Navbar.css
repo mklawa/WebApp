@@ -1,0 +1,80 @@
+.header {
+  background-color: #448546; /* Updated to green color */
+  color: #fff;
+  padding: 1px;
+  position: sticky; /* For dropdown menu */
+  top: 0;
+}
+
+.dropdown {
+  position: absolute;
+  top: 45%;
+  right: 10px;
+  transform: translateY(-50%);
+
+}
+
+.dropbtn {
+  background-color: #448546;
+  color: white;
+  padding: 1px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style for the hamburger icon */
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 25px;
+  width: 35px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger-icon div {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  transition: all 0.3s;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 10px;
+  z-index: 1;
+  right: 0; /* Aligns the dropdown content to the right */
+}
+
+.btn {
+  color: white;
+  border: none;
+  padding: 8px 8px;
+  margin-bottom: 8px;
+  margin-top: 0px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%; /* Make the button expand to the full width of its container */
+  text-align: center; /* Align text to the left */
+}
+
+.settingbtn {
+  background-color: lightseagreen; /* Green background to match the theme */
+}
+
+.logoutbtn {
+  background-color: #f44336; /* Red color for logout to make it stand out */
+  margin-bottom: 0px;
+}
+
+.dashboardbtn {
+}
+
+

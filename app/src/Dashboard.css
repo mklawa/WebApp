@@ -1,0 +1,64 @@
+/* Dashboard.css */
+
+/* General styles for mobile and wider screens */
+.landing-page {
+  padding: 0px;
+  text-align: center;
+}
+
+/* Navbar related styles removed */
+
+.hero {
+  /*background-image: url('your-hero-image.jpg');*/
+  background-size: cover;
+  color: #448546;
+  text-align: center;
+  padding: 40px;
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 0px;
+}
+
+.info-block {
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.green-button {
+  background-color: #448546; /* Green */
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.green-button:hover {
+  background-color: #a9a9a9; /* Updated Gray on hover */
+}
+
+/* Media queries for smaller screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+  .hero {
+    padding: 20px;
+    padding-bottom: 10px;
+  }
+
+  .info-block {
+    width: calc(100% - 40px); /* Adjust width for smaller screens */
+    margin: 10px; /* Adjust margin for smaller screens */
+  }
+}
