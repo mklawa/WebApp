@@ -5,3 +5,4 @@ flask-cors
 WTForms
 psycopg2
 pycryptodome
+Gunicorn
